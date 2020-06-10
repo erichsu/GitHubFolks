@@ -11,6 +11,7 @@ target 'GitHubFolks' do
   pod 'ResponseDetective'
   pod 'Codextended'
   pod 'ReachabilitySwift'
+  pod 'Kingfisher'
 
   # Resource and localization
   pod 'R.swift'

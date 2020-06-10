@@ -10,6 +10,7 @@ import UIKit
 import SwifterSwift
 import NSObject_Rx
 import Codextended
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -3,7 +3,9 @@ PODS:
   - Codextended (0.3.0)
   - Differentiator (4.0.1)
   - Gedatsu (1.2.0)
-  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -75,7 +77,7 @@ PODS:
 DEPENDENCIES:
   - Codextended
   - Gedatsu
-  - IQKeyboardManagerSwift
+  - Kingfisher
   - Moya/RxSwift
   - MoyaSugar/RxSwift
   - "NSObject+Rx"
@@ -98,7 +100,7 @@ SPEC REPOS:
     - Codextended
     - Differentiator
     - Gedatsu
-    - IQKeyboardManagerSwift
+    - Kingfisher
     - Moya
     - MoyaSugar
     - "NSObject+Rx"
@@ -123,7 +125,7 @@ SPEC CHECKSUMS:
   Codextended: f384271b8694376ad766ddbf2a011efbfdcee905
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Gedatsu: 13a21a3cbf7978f9ff671eca5715b94a4309d9a8
-  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   MoyaSugar: 63390c557e038c087dc4bcc8a9f9fda69647ce43
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
@@ -143,6 +145,6 @@ SPEC CHECKSUMS:
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
 
-PODFILE CHECKSUM: 645d5a70af3dc22bd332f07251c6bd0a21e846a9
+PODFILE CHECKSUM: 1121a63a60b529319f007e34aa6443e5e2795bfe
 
 COCOAPODS: 1.9.3
