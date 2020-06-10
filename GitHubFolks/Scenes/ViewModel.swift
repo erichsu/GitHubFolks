@@ -40,8 +40,8 @@ final class ViewModel {
     func fetchUsers(since: Int? = nil, count: Int = 20) -> Single<GitHubUsersResp> {
         githubProvider.request(.users(since: since, count: count))
             .do(onSuccess: { [weak self] in
-                let link = $0.response?.headers.value(for: "Link")
-                let nextItem = link?.split(separator: ",").first(where: { $0.contains("rel=\"next\"") })?.description ?? ""
+                guard let link = $0.response?.headers.value(for: "Link") else { return }
+                let nextItem = link.split(separator: ",").first(where: { $0.contains("rel=\"next\"") })?.description ?? ""
                 let pattern = try NSRegularExpression(pattern: ".*since=(\\d+).*", options: [])
                 if let matched = pattern.firstMatch(in: nextItem, range: nextItem.nsString.range(of: nextItem)) {
                     self?.nextPageSince = Int(nextItem[Range(matched.range(at: 1), in: nextItem)!])
