@@ -36,6 +36,13 @@ final class ViewController: UIViewController {
         bindViewModel()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let info = R.segue.viewController.userDetail(segue: segue) {
+            
+        }
+    }
+
     private func bindViewModel() {
         viewModel.output.users
             .map { [ViewModel.Section(items: $0)] }
@@ -48,6 +55,10 @@ final class ViewController: UIViewController {
             let section = dataSource.sectionModels[sec]
             return section.items.count > 0 ? "Users (\(section.items.count))" : "No User found"
         }
+
+        tableView.rx.modelSelected(ViewModel.Item.self)
+            .bind(onNext: { [weak self] in self?.performSegue(withIdentifier: R.segue.viewController.userDetail, sender: $0) })
+            .disposed(by: rx.disposeBag)
         
         tableView.tableFooterView = indicator
         tableView.rx.contentOffset
