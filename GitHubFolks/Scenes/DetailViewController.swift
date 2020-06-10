@@ -9,8 +9,9 @@
 import UIKit
 import SwiftMessages
 import RxDataSources
+import NVActivityIndicatorView
 
-final class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController, NVActivityIndicatorViewable {
 
     var viewModel: DetailViewModel!
 
@@ -40,7 +41,9 @@ final class DetailViewController: UIViewController {
             .catchMoyaError(ErrorResp.self)
             .asObservable()
             .do(
-                onError: SwiftMessages.showError
+                onError: SwiftMessages.showError,
+                onSubscribed: { [weak self] in self?.startAnimating() },
+                onDispose: { [weak self] in self?.stopAnimating() }
             )
             .subscribe(viewModel.input.loadDetail)
             .disposed(by: rx.disposeBag)
