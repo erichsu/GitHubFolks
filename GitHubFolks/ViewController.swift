@@ -3,7 +3,7 @@
 //  GitHubFolks
 //
 //  Created by Eric Hsu on 2020/6/10.
-//  Copyright © 2020 Edgenta UEMS Ltd. All rights reserved.
+//  Copyright © 2020 Anonymous Ltd. All rights reserved.
 //
 
 import UIKit
