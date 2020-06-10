@@ -12,11 +12,6 @@ import Alamofire
 
 let githubProvider = GitHubProvider<GitHubTarget>()
 
-enum GitHubTarget {
-    case users(page: Int, count: Int)
-    case userDetail(id: String)
-}
-
 final class GitHubProvider<Target> where Target: Moya.TargetType {
 
     private let provider: MoyaProvider<Target>
@@ -44,6 +39,12 @@ final class GitHubProvider<Target> where Target: Moya.TargetType {
     }
 }
 
+
+enum GitHubTarget {
+    case users(since: Int?, count: Int)
+    case userDetail(id: String)
+}
+
 extension GitHubTarget: SugarTargetType {
 
     var route: Route {
@@ -53,7 +54,16 @@ extension GitHubTarget: SugarTargetType {
         }
     }
 
-    var parameters: MoyaSugar.Parameters? { return nil }
+    var parameters: MoyaSugar.Parameters? {
+        switch self {
+        case let .users(since, count):
+            return URLEncoding.default => [
+                "per_page": count,
+                "since": since
+            ].compactMapValues { $0 }
+        case .userDetail: return nil
+        }
+    }
 
     var baseURL: URL { "https://api.github.com".url! }
 
