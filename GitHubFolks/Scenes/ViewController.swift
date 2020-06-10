@@ -77,6 +77,7 @@ final class UserCell: UITableViewCell {
     func setup(with item: ViewModel.Item) {
         avatarIcon.kf.setImage(with: item.avatarUrl)
         loginLabel.text = item.login
-        badgeLabel.text = item.siteAdmin ? "SiteAdmin" : "--"
+        badgeLabel.text = item.siteAdmin ? "Staff" : nil
+        badgeLabel.isHidden = !item.siteAdmin
     }
 }
