@@ -1,0 +1,8 @@
+app_identifier("org.tingyao.GitHubFolks") # The bundle identifier of your app
+apple_id("eric_hsu@livemail.tw") # Your Apple email address
+
+itc_team_id("663993") # App Store Connect Team ID
+team_id("66D3CJTRN4") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

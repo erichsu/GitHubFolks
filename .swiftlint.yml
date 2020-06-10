@@ -1,0 +1,6 @@
+disabled_rules:
+  - control_statement
+  - line_length
+excluded:
+  - Pods
+  - "**/*/*.generated.swift"
