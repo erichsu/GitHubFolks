@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="-423" y="-17"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="f6u-5F-2md">
             <objects>
-                <viewController id="NHL-Wm-7tL" sceneMemberID="viewController">
+                <viewController id="NHL-Wm-7tL" customClass="DetailViewController" customModule="GitHubFolks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cup-Rr-UTn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,11 +123,11 @@
                                     <constraint firstAttribute="height" constant="128" id="liA-ty-fkb"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-Zu-PJj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-Zu-PJj">
                                 <rect key="frame" x="0.0" y="374" width="414" height="522"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="65l-6J-itj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailLogin" rowHeight="59" id="65l-6J-itj" customClass="DetailLoginCell" customModule="GitHubFolks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="65l-6J-itj" id="v2D-tZ-skv">
@@ -145,21 +145,35 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4q-RX-ckJ">
-                                                    <rect key="frame" x="104" y="27" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4q-RX-ckJ" customClass="BadgeLabel" customModule="GitHubFolks" customModuleProvider="target">
+                                                    <rect key="frame" x="104" y="27" width="83" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarIcon" destination="uTA-tZ-HwV" id="SfU-R7-pBb"/>
+                                            <outlet property="badgeLabel" destination="W4q-RX-ckJ" id="VFH-qI-F4b"/>
+                                            <outlet property="loginLabel" destination="OIZ-NJ-7R1" id="BBG-Kv-cuT"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bol-AB-XJ5">
-                                        <rect key="frame" x="0.0" y="87" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailLabel" id="bol-AB-XJ5" customClass="DetailLabelCell" customModule="GitHubFolks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="87" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bol-AB-XJ5" id="52C-D6-V7a">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cgf-Gp-y6U">
@@ -175,12 +189,16 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImage" destination="cgf-Gp-y6U" id="3lI-41-l9H"/>
+                                            <outlet property="titleLabel" destination="R8M-b3-J2q" id="5Sg-4R-Q9N"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ZnC-Cf-itM">
-                                        <rect key="frame" x="0.0" y="130.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailLink" id="ZnC-Cf-itM" customClass="DetailLinkCell" customModule="GitHubFolks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="131" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZnC-Cf-itM" id="KLo-KE-yvN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-uJ-GgY">
@@ -194,15 +212,30 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImage" destination="ASe-uJ-GgY" id="dfz-MT-7Po"/>
+                                            <outlet property="linkButton" destination="HuF-5P-R95" id="rcE-mS-eaG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpu-k6-XTt">
-                                <rect key="frame" x="186" y="303" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ttd-Ti-oes">
+                                <rect key="frame" x="186" y="303" width="42" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpu-k6-XTt">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bza-fq-n4P">
+                                        <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -211,13 +244,19 @@
                             <constraint firstItem="ygN-Zu-PJj" firstAttribute="trailing" secondItem="4Ze-5s-h3Y" secondAttribute="trailing" id="HmU-N0-O4T"/>
                             <constraint firstAttribute="bottom" secondItem="ygN-Zu-PJj" secondAttribute="bottom" id="IMQ-NO-Pu7"/>
                             <constraint firstItem="epo-6c-iaK" firstAttribute="centerX" secondItem="Cup-Rr-UTn" secondAttribute="centerX" id="IcJ-Mf-tTj"/>
-                            <constraint firstItem="ygN-Zu-PJj" firstAttribute="top" secondItem="Dpu-k6-XTt" secondAttribute="bottom" constant="50" id="J4X-hb-KOG"/>
-                            <constraint firstItem="Dpu-k6-XTt" firstAttribute="centerX" secondItem="Cup-Rr-UTn" secondAttribute="centerX" id="kBI-n6-lyI"/>
-                            <constraint firstItem="Dpu-k6-XTt" firstAttribute="top" secondItem="epo-6c-iaK" secondAttribute="bottom" constant="30" id="uIt-Hv-dtc"/>
+                            <constraint firstItem="ttd-Ti-oes" firstAttribute="top" secondItem="epo-6c-iaK" secondAttribute="bottom" constant="30" id="Pli-ko-A08"/>
+                            <constraint firstItem="ygN-Zu-PJj" firstAttribute="top" secondItem="ttd-Ti-oes" secondAttribute="bottom" constant="30" id="ZjA-Fn-8kU"/>
+                            <constraint firstItem="ttd-Ti-oes" firstAttribute="centerX" secondItem="Cup-Rr-UTn" secondAttribute="centerX" id="gSW-jS-Ivd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ze-5s-h3Y"/>
                     </view>
                     <navigationItem key="navigationItem" id="X29-yr-UUJ"/>
+                    <connections>
+                        <outlet property="avatarImage" destination="epo-6c-iaK" id="Aqh-Ja-wEV"/>
+                        <outlet property="bioLabel" destination="bza-fq-n4P" id="DrE-87-Zju"/>
+                        <outlet property="nameLabel" destination="Dpu-k6-XTt" id="Cxu-Mm-ybZ"/>
+                        <outlet property="tableView" destination="ygN-Zu-PJj" id="ws0-03-iV8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWx-zv-JQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

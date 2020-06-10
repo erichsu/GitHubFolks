@@ -24,6 +24,9 @@
 		5606CE71249128F000D3BFD8 /* ErrorResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5606CE70249128F000D3BFD8 /* ErrorResp.swift */; };
 		5606CE732491294B00D3BFD8 /* PrimitiveSequence+MoyaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5606CE722491294A00D3BFD8 /* PrimitiveSequence+MoyaError.swift */; };
 		56F7BE3024914735005E9EA2 /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7BE2F24914735005E9EA2 /* BadgeLabel.swift */; };
+		56F7BE3224914C2C005E9EA2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7BE3124914C2C005E9EA2 /* DetailViewController.swift */; };
+		56F7BE3424914C36005E9EA2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7BE3324914C36005E9EA2 /* DetailViewModel.swift */; };
+		56F7BE362491516B005E9EA2 /* GitHubUserDetailResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F7BE352491516B005E9EA2 /* GitHubUserDetailResp.swift */; };
 		6015E5E79F0D273D3EAB6A26 /* Pods_GitHubFolksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6896FCF3E19EACF1A3B0F0 /* Pods_GitHubFolksTests.framework */; };
 		B6976728CC9E86E26450AD53 /* Pods_GitHubFolks_GitHubFolksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FBF818D49FF6D73230A12B /* Pods_GitHubFolks_GitHubFolksUITests.framework */; };
 		C23D1A70F6612A84B0BBF649 /* Pods_GitHubFolks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDC77C4266203E9B97B540 /* Pods_GitHubFolks.framework */; };
@@ -73,6 +76,9 @@
 		5606CE70249128F000D3BFD8 /* ErrorResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResp.swift; sourceTree = "<group>"; };
 		5606CE722491294A00D3BFD8 /* PrimitiveSequence+MoyaError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+MoyaError.swift"; sourceTree = "<group>"; };
 		56F7BE2F24914735005E9EA2 /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
+		56F7BE3124914C2C005E9EA2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		56F7BE3324914C36005E9EA2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		56F7BE352491516B005E9EA2 /* GitHubUserDetailResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserDetailResp.swift; sourceTree = "<group>"; };
 		84EDC77C4266203E9B97B540 /* Pods_GitHubFolks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubFolks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891814AF34D03DED17B8070F /* Pods-GitHubFolks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubFolks.release.xcconfig"; path = "Target Support Files/Pods-GitHubFolks/Pods-GitHubFolks.release.xcconfig"; sourceTree = "<group>"; };
 		BF6896FCF3E19EACF1A3B0F0 /* Pods_GitHubFolksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubFolksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				5606CE642490F18A00D3BFD8 /* GitHubUserResp.swift */,
+				56F7BE352491516B005E9EA2 /* GitHubUserDetailResp.swift */,
 				5606CE70249128F000D3BFD8 /* ErrorResp.swift */,
 			);
 			path = Responses;
@@ -216,6 +223,8 @@
 				5606CE322490E62300D3BFD8 /* Main.storyboard */,
 				5606CE302490E62300D3BFD8 /* ViewController.swift */,
 				5606CE6C2490FE7E00D3BFD8 /* ViewModel.swift */,
+				56F7BE3124914C2C005E9EA2 /* DetailViewController.swift */,
+				56F7BE3324914C36005E9EA2 /* DetailViewModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -511,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F7BE3224914C2C005E9EA2 /* DetailViewController.swift in Sources */,
 				5606CE312490E62300D3BFD8 /* ViewController.swift in Sources */,
 				5606CE2D2490E62300D3BFD8 /* AppDelegate.swift in Sources */,
 				5606CE672490F1CB00D3BFD8 /* GitHubProvider.swift in Sources */,
@@ -519,6 +529,8 @@
 				5606CE2F2490E62300D3BFD8 /* SceneDelegate.swift in Sources */,
 				56F7BE3024914735005E9EA2 /* BadgeLabel.swift in Sources */,
 				5606CE71249128F000D3BFD8 /* ErrorResp.swift in Sources */,
+				56F7BE362491516B005E9EA2 /* GitHubUserDetailResp.swift in Sources */,
+				56F7BE3424914C36005E9EA2 /* DetailViewModel.swift in Sources */,
 				5606CE6F2491289100D3BFD8 /* SwiftMessage+Error.swift in Sources */,
 				5606CE6D2490FE7E00D3BFD8 /* ViewModel.swift in Sources */,
 				5606CE732491294B00D3BFD8 /* PrimitiveSequence+MoyaError.swift in Sources */,

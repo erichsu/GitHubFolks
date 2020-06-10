@@ -38,8 +38,8 @@ final class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if let info = R.segue.viewController.userDetail(segue: segue) {
-            
+        if let info = R.segue.viewController.userDetail(segue: segue), let item = sender as? ViewModel.Item {
+            info.destination.viewModel = .init(user: item)
         }
     }
 
