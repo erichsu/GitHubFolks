@@ -15,7 +15,7 @@ struct GitHubUserDetailResp: Codable {
     let siteAdmin: Bool
     let email: String?
     let login: String
-    let blog: URL?
+    let blog: String?
     private enum CodingKeys: String, CodingKey {
         case location
         case bio

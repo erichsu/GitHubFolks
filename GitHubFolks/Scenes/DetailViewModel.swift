@@ -27,7 +27,7 @@ final class DetailViewModel {
                 [
                     .login(login: $0.login, isSiteAdmin: $0.siteAdmin),
                     .location($0.location),
-                    .blog($0.blog)
+                    .blog($0.blog?.url)
                 ]
             },
             detail: detailSub.asDriver(onErrorDriveWith: .empty())
